@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-deployment
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: ubuntu-server
+        image: ubuntu:24.10
+        imagePullPolicy: Always
+      restartPolicy: Always
